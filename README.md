@@ -10,7 +10,7 @@ https://quiz-game-website.netlify.app/
 
 When you first visit the website, you will be prompted to choose a category, difficulty level, and number of questions for your quiz. These options correspond to the categories and difficulty levels available in the Open Trivia Database. Once you have made your selections, click the "Start Game" button to begin.
 
-During the quiz game, you will be presented with a series of multiple-choice questions. To answer a question, simply click on one of the answer options provided. If you select the correct answer, the answer option will turn green, otherwise it will turn blue.
+During the quiz game, you will be presented with a series of multiple-choice questions. To answer a question, simply click on one of the answer options provided. If you select the correct answer, the answer option will turn green, otherwise it will turn red.
 
 Above the question, you will see information about how many questions there are in total, which question you are currently on, and your current score. Once you have answered all of the questions, your final score will be displayed on the screen.
 
