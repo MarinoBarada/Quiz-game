@@ -2,6 +2,10 @@
 
 Welcome to the Quiz Game Website! This is a React.js application that allows users to play a quiz game with questions from the Open Trivia Database JSON API.
 
+## Demo
+
+https://quiz-game-website.netlify.app/
+
 ## How to Use
 
 When you first visit the website, you will be prompted to choose a category, difficulty level, and number of questions for your quiz. These options correspond to the categories and difficulty levels available in the Open Trivia Database. Once you have made your selections, click the "Start Game" button to begin.
