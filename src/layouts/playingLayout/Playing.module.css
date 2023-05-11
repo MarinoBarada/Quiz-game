@@ -1,0 +1,20 @@
+.quiz-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.quiz-question {
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 0.7em 0;
+}
+  
+.quiz-options {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
