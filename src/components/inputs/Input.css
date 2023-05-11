@@ -7,6 +7,12 @@ input[type="number"] ,select{
     color: black;
   }
 
+  .container span {
+  color: red;
+  font-size: 1.8rem;
+  padding-left: 0.1em;
+}
+
 label {
   font-size: 2.5rem;
 }

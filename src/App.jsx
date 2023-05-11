@@ -19,6 +19,7 @@ function App() {
   const [number, setNumber] = useState(1);
   const [category, setCategory] = useState(0);
   const [question, setQuestion] = useState("");
+  const [notValid, setNotValid] = useState(false);
 
   //Setting the URL value
   const difficultySelect = (event) => {
@@ -30,23 +31,27 @@ function App() {
   };
 
   function numberChange(e) {
-    if (0 < e.target.value && e.target.value < 51) setNumber(e.target.value);
+    setNotValid(false);
+    setNumber(e.target.value);
+    if (e.target.value <= 0) setNotValid(true);
   }
 
   //URL setting for API
   function setUrlAPI() {
-    let tempurl = `https://opentdb.com/api.php?amount=${number}`;
+    if (!notValid) {
+      let tempurl = `https://opentdb.com/api.php?amount=${number}`;
 
-    if (category) {
-      tempurl = tempurl.concat(`&category=${category}`);
+      if (category) {
+        tempurl = tempurl.concat(`&category=${category}`);
+      }
+
+      if (difficulty != "") {
+        tempurl = tempurl.concat(`&difficulty=${difficulty}`);
+      }
+
+      getData(tempurl);
+      setQuizState("playing"); //Change of layout to playing
     }
-
-    if (difficulty != "") {
-      tempurl = tempurl.concat(`&difficulty=${difficulty}`);
-    }
-
-    getData(tempurl);
-    setQuizState("playing"); //Change of layout to playing
   }
   //Get data from API
   async function getData(url) {
@@ -134,6 +139,7 @@ function App() {
               action2={difficultySelect}
               action3={numberChange}
               action4={setUrlAPI}
+              notValid={notValid}
             />
           )}
         </div>

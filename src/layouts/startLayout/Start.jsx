@@ -10,7 +10,7 @@ function Start(props) {
     <div className={stil["form"]}>
       <Category value={props.category} action={props.action1} />
       <Difficulty value={props.difficulty} action={props.action2} />
-      <Number value={props.number} action={props.action3} />
+      <Number value={props.number} action={props.action3} notValid={props.notValid} />
       <GameButton action={props.action4} text="START GAME" />
     </div>
   );
