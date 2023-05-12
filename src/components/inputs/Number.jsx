@@ -6,7 +6,7 @@ function Number({ value, action ,notValid}) {
     <div className="container">
       <label htmlFor="number">Number of Questions:</label>
       <input type="number" min={0} max={50} value={value} onChange={action} />
-      {notValid && <span>Broj mora bit veći od 0</span>}
+      {notValid && <span>The number must be greater than 0</span>}
     </div>
   );
 }
